@@ -1,113 +1,135 @@
-# Digital Advertising Optimization – Executive Summary
+# Digital Advertising Optimization  
+## Executive Summary
 
-## 1. Business Problem
+### 🎯 TL;DR
 
-We ran daily advertising campaigns for one full year (365 days) across two platforms:
-- **Facebook Ads**
-- **Google AdWords**
+![Business Snapshot Overview](images/Snapshot.jpg)
 
-The goal of this analysis is to answer a simple business question:
-
-> **How should we allocate advertising budget to maximize conversions while controlling costs?**
-
-This requires comparing not just volume (clicks, conversions), but **cost efficiency, consistency, and predictability** across platforms.
+- Facebook delivers **~4× higher conversion efficiency per click** than AdWords (≈21% vs ≈5%)
+- Strong evidence supports **reallocating budget toward Facebook**, with a recommended **75/25 split**
+- **Expected outcome:** ~26% increase in conversions, improved cost efficiency, and higher forecast reliability under current performance conditions
 
 ---
 
-## 2. Data Overview
+## Business Context
 
-- Granularity: **Daily**
-- Time span: **365 days**
-- Platforms analyzed:
-  - Facebook Ads
-  - Google AdWords
-- Metrics available:
-  - Views (Impressions)
-  - Clicks
-  - Conversions
-  - Total Cost
-  - CTR (Click-Through Rate)
-  - Conversion Rate
-  - CPC (Cost per Click)
+Over a 365-day period, daily advertising spend was allocated across Facebook Ads and Google AdWords.  
+The core objective was to determine **how to maximize conversions while maintaining cost discipline**.
 
-All derived metrics (CTR, Conversion Rate, CPC) were validated for internal consistency before analysis.
+Rather than focusing solely on volume, the analysis emphasized:
+- Efficiency  
+- Consistency  
+- Predictability  
+
+**North Star Metric:**  
+**Cost per Conversion**, linking spend directly to measurable business outcomes.
 
 ---
 
-## 3. Key KPIs
+## Analytical Scope
 
-### Core Performance Metrics
-- **CTR (Click-Through Rate)** – Traffic quality
-- **Conversion Rate** – Landing page + intent quality
-- **CPC (Cost per Click)** – Traffic acquisition efficiency
-
-### 🎯 North Star Metric
-**Cost per Conversion**
-
-> Cost per Conversion directly ties advertising spend to business outcomes and enables a fair comparison across platforms with different traffic volumes.
-
----
-
-## 4. High-Level Findings
-
-### Performance
-- Both platforms consistently generate conversions on a daily basis.
-- Facebook generally produces **higher daily conversion volume**, while AdWords shows **more stable performance on certain periods**.
-
-### Cost Efficiency
-- Cost per Conversion varies significantly day to day, highlighting the importance of **averages vs volatility**.
-- Periods of low CPC do not always translate into low Cost per Conversion, reinforcing the need to optimize for outcomes, not clicks.
-
-### Consistency vs Scale
-- Facebook benefits from scale and volume.
-- AdWords provides more controlled and predictable performance during specific windows.
+- 365 days of paired daily campaign data  
+- Platforms analyzed: Facebook Ads and Google AdWords  
+- Metrics evaluated:
+  - Impressions  
+  - Clicks  
+  - Conversions  
+  - Total cost  
+  - CTR  
+  - Conversion rate  
+  - Cost per click (CPC)  
+- Methods applied:
+  - Paired t-tests  
+  - Effect size (Cohen’s d)  
+  - Linear and logistic regression  
+  - Cointegration testing  
 
 ---
 
-## 5. Statistical & Modeling Insights (Summary)
+## Key Insights
 
-- A/B testing was used to compare mean daily conversions between platforms.
-- Effect sizes were calculated to understand **practical impact**, not just statistical significance.
-- Regression models showed a strong relationship between clicks and conversions on both platforms, with differing efficiencies.
+### 📊 Relative Performance
 
-These results support using **both platforms strategically**, rather than treating the decision as binary.
-
----
-
-## 6. Business Recommendation
-
-### Budget Allocation Strategy
-- **Primary allocation:** Facebook Ads  
-  - Best suited for scaling conversions efficiently.
-- **Secondary allocation:** Google AdWords  
-  - Ideal for stable, intent-driven traffic and risk balancing.
-
-### Tactical Guidance
-- Monitor **Cost per Conversion daily**, not just CPC or CTR.
-- Reallocate spend dynamically during periods where one platform shows sustained efficiency.
-- Use regression-based forecasts to estimate expected conversions before increasing spend.
+- Facebook consistently generates **5–7× higher daily conversions** than AdWords (≈35–50 vs ≈4–9)
+- The performance gap is **persistent across identical days**, not driven by seasonality or isolated spikes
 
 ---
 
-## 7. Risks & Limitations
+### 📊 Conversion Efficiency & Predictability
 
-- This analysis is based on **observational data**, not randomized experiments.
-- External factors (seasonality, competition, creative changes) are not explicitly modeled.
-- Attribution is platform-level; cross-channel effects are not captured.
+- Facebook converts clicks at **~4.1× the efficiency** of AdWords  
+  - ≈21% vs ≈5% click-to-conversion rate  
+- Strong click-to-conversion relationship on Facebook:
+  - Correlation = **0.87**
+  - Linear model explains **76%** of conversion variance (R² = 0.76)
+- AdWords shows limited predictability:
+  - Correlation = **0.45**
+  - Only **20%** of variance explained (R² = 0.20)
+
+**Implication:**  
+Facebook supports reliable forecasting and scalable growth within observed spend ranges, while AdWords performance remains inconsistent and difficult to predict.
 
 ---
 
-## 8. Future Improvements
+### 📊 Statistical Confidence
 
-- Run controlled A/B budget experiments for causal validation.
-- Implement multi-touch attribution modeling.
-- Use Bayesian methods for uncertainty-aware budget planning.
-- Introduce time-series forecasting to anticipate performance shifts.
+- Paired t-test (same-day comparison) confirms Facebook’s superiority:
+  - T-statistic = **33.10**
+  - P-value = **8.36 × 10⁻¹¹²**
+- Effect size:
+  - **Cohen’s d = 1.73** (“Very Large”)
+
+**Interpretation:**  
+The difference is both **statistically robust** and **materially meaningful**, with a substantial and consistent advantage favoring Facebook.
 
 ---
 
-## 9. Final Takeaway
+### 📊 Cost Dynamics & Optimization Drivers
 
-**Optimizing digital advertising is not about choosing one platform over another — it’s about allocating spend based on cost-efficient conversions, consistency, and risk tolerance.**
+- Logistic regression (Facebook campaigns) indicates:
+  - **Click volume** is the strongest positive success driver (+22.8% odds per click)
+  - **CPC** is the strongest negative driver (−69.3% odds per unit increase)
+  - **CTR has minimal standalone impact**, reinforcing its role as a secondary metric
 
-Cost per Conversion should remain the guiding metric for all future campaign decisions.
+**Implication:**  
+Cost-efficient volume, not headline CTR, drives sustainable performance.
+
+---
+
+### 📊 Long-Term Reliability
+
+- Cointegration analysis confirms a **stable long-term relationship** between Facebook ad spend and conversions (p < 0.0001)
+- This indicates that spend and outcomes move together over time, supporting:
+  - Budget planning
+  - Controlled scaling
+  - Reliable optimization feedback loops
+
+---
+
+## Strategic Recommendation
+
+### Budget Allocation
+
+- Shift toward a **Facebook-weighted allocation (≈75%)**, while retaining **AdWords (≈25%)** for supplemental or brand-driven demand
+- This mix balances:
+  - Higher conversion efficiency
+  - Stronger predictability
+  - Reduced dependence on volatile or low-intent traffic
+
+---
+
+## Expected Impact (Directionally)
+
+- ~26% increase in total conversions based on historical performance patterns  
+- Improved cost efficiency driven by higher conversion rates and lower sensitivity to CPC  
+- Meaningfully higher forecast accuracy due to Facebook’s stronger explanatory power  
+
+*All projections assume current CPC levels and observed conversion dynamics remain broadly stable.*
+
+---
+
+## Closing Note
+
+The analysis indicates that **platform choice is a primary driver of conversion outcomes**.  
+Facebook demonstrates a durable advantage in efficiency, consistency, and predictability, making it the preferred channel for scaled investment under current conditions.
+
