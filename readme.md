@@ -9,8 +9,6 @@
 - Strong evidence supports **reallocating budget toward Facebook**, with a recommended **75/25 split**
 - **Expected outcome:** ~26% increase in conversions, improved cost efficiency, and higher forecast reliability under current performance conditions
 
----
-
 ## Business Context
 
 Over a 365-day period, daily advertising spend was allocated across Facebook Ads and Google AdWords.  
@@ -23,8 +21,6 @@ Rather than focusing solely on volume, the analysis emphasized:
 
 **North Star Metric:**  
 **Cost per Conversion**, linking spend directly to measurable business outcomes.
-
----
 
 ## Analytical Scope
 
@@ -44,16 +40,12 @@ Rather than focusing solely on volume, the analysis emphasized:
   - Linear and logistic regression  
   - Cointegration testing  
 
----
-
 ## Key Insights
 
 ### 📊 Relative Performance
 
 - Facebook consistently generates **5–7× higher daily conversions** than AdWords (≈35–50 vs ≈4–9)
 - The performance gap is **persistent across identical days**, not driven by seasonality or isolated spikes
-
----
 
 ### 📊 Conversion Efficiency & Predictability
 
@@ -69,8 +61,6 @@ Rather than focusing solely on volume, the analysis emphasized:
 **Implication:**  
 Facebook supports reliable forecasting and scalable growth within observed spend ranges, while AdWords performance remains inconsistent and difficult to predict.
 
----
-
 ### 📊 Statistical Confidence
 
 - Paired t-test (same-day comparison) confirms Facebook’s superiority:
@@ -82,8 +72,6 @@ Facebook supports reliable forecasting and scalable growth within observed spend
 **Interpretation:**  
 The difference is both **statistically robust** and **materially meaningful**, with a substantial and consistent advantage favoring Facebook.
 
----
-
 ### 📊 Cost Dynamics & Optimization Drivers
 
 - Logistic regression (Facebook campaigns) indicates:
@@ -94,8 +82,6 @@ The difference is both **statistically robust** and **materially meaningful**, w
 **Implication:**  
 Cost-efficient volume, not headline CTR, drives sustainable performance.
 
----
-
 ### 📊 Long-Term Reliability
 
 - Cointegration analysis confirms a **stable long-term relationship** between Facebook ad spend and conversions (p < 0.0001)
@@ -103,8 +89,6 @@ Cost-efficient volume, not headline CTR, drives sustainable performance.
   - Budget planning
   - Controlled scaling
   - Reliable optimization feedback loops
-
----
 
 ## Strategic Recommendation
 
@@ -116,8 +100,6 @@ Cost-efficient volume, not headline CTR, drives sustainable performance.
   - Stronger predictability
   - Reduced dependence on volatile or low-intent traffic
 
----
-
 ## Expected Impact (Directionally)
 
 - ~26% increase in total conversions based on historical performance patterns  
@@ -126,10 +108,7 @@ Cost-efficient volume, not headline CTR, drives sustainable performance.
 
 *All projections assume current CPC levels and observed conversion dynamics remain broadly stable.*
 
----
-
 ## Closing Note
 
 The analysis indicates that **platform choice is a primary driver of conversion outcomes**.  
 Facebook demonstrates a durable advantage in efficiency, consistency, and predictability, making it the preferred channel for scaled investment under current conditions.
-
